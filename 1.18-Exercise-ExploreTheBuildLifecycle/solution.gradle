@@ -6,9 +6,17 @@ Code to answer the quiz question in the classroom.
 
 
 task test {
+    dependsOn "test1"
     doLast {
         println "1: I'm in ur action"
     }
     println "2: I'm in ur configuration closure"
+}
+
+task test1 {
+    doLast {
+        println "4: I'm in ur action"
+    }
+    println "5: I'm in ur configuration closure"
 }
 println "3: I'm in ur build script"
